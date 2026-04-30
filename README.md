@@ -28,7 +28,8 @@ pip install playwright
 playwright install chromium
 
 ```
-#⚙️ Konfigurasi
+---
+##⚙️ Konfigurasi
 
 ### 1. Setup Sesi Login (`fb_cookies.json`)
 
@@ -44,14 +45,13 @@ Bot ini menggunakan cookies agar tidak perlu login berulang dan mengurangi risik
 5. Paste hasil export ke dalam file tersebut  
 
 ---
-
+```
 ### 2. Daftar Grup (`groups.json`)
 
 Buat file `groups.json` dan isi dengan format berikut:
 
-```
+
 ```bash
-json
 [
   { "url": "https://web.facebook.com/groups/link_grup_1" },
   { "url": "https://web.facebook.com/groups/link_grup_2" }
@@ -66,10 +66,11 @@ Contoh default di Windows:
 
 ```bash
 C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
-
+```
 ## 🚀 Cara Menjalankan
 
 Jalankan bot dengan perintah berikut:
 
 ```bash
 python bot_fb.py
+```
