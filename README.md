@@ -28,12 +28,13 @@ pip install playwright
 playwright install chromium
 
 ```
-##⚙️ Konfigurasi
+#⚙️ Konfigurasi
 
 ### 1. Setup Sesi Login (`fb_cookies.json`)
 
 Bot ini menggunakan cookies agar tidak perlu login berulang dan mengurangi risiko checkpoint.
 
+```bash
 **Langkah-langkah:**
 
 1. Install ekstensi **Cookie-Editor** di Chrome  
@@ -48,13 +49,15 @@ Bot ini menggunakan cookies agar tidak perlu login berulang dan mengurangi risik
 
 Buat file `groups.json` dan isi dengan format berikut:
 
-```json
+```
+```bash
+json
 [
   { "url": "https://web.facebook.com/groups/link_grup_1" },
   { "url": "https://web.facebook.com/groups/link_grup_2" }
 ]
 
-
+```
 ### 3. Konfigurasi Path Chrome
 
 Buka file `.py` dan sesuaikan `executable_path` dengan lokasi Chrome di perangkat Anda.
