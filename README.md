@@ -3,66 +3,53 @@
 Developed with ❤️ by **ZII DEV** (Roji Rohmatillah)
 
 [![YouTube](https://img.shields.io/badge/YouTube-ZII%20DEV-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@ziideveloper)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 
 ## 📋 Deskripsi
-Bot automasi untuk posting ke grup Facebook menggunakan Python dan Playwright. Dibuat khusus untuk membantu promosi.
-
-## ⚖️ License
-Distributed under the MIT License. See `LICENSE` for more information.
-
-# Facebook Auto Post - Playwright Edition 🚀
-
-Developed with ❤️ by **ZII DEV** (Roji Rohmatillah)
-
-[![YouTube](https://img.shields.io/badge/YouTube-ZII%20DEV-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@ziideveloper)
-
-## 📋 Deskripsi
-Bot automasi untuk posting ke grup Facebook menggunakan Python dan Playwright. Dibuat khusus untuk membantu promosi karya atau project (seperti game development devlogs).
+Bot automasi untuk posting ke grup Facebook menggunakan **Python** dan **Playwright**. Alat ini dirancang untuk membantu para *indie developer* atau *content creator* mempromosikan karya mereka (seperti devlog game) secara efisien tanpa perlu posting manual satu per satu.
 
 ---
 
 ## 🛠️ Persiapan & Instalasi
 
-### 1. Persyaratan Sistem
-*   Python 3.8 atau versi lebih baru.
-*   Google Chrome terinstal (untuk mode `persistent_context`).
+### 1. Prasyarat Sistem
+Pastikan perangkat Anda sudah memenuhi kriteria berikut:
+*   **Python 3.8+** terinstal.
+*   **Google Chrome** terinstal (untuk sinkronisasi browser).
 
 ### 2. Instalasi Library
-Buka terminal atau CMD, lalu jalankan perintah berikut:
+Jalankan perintah berikut di Terminal/CMD untuk menginstal dependensi yang diperlukan:
 ```bash
 # Install library Playwright
 pip install playwright
 
-# Install browser driver
+# Install browser driver khusus Chromium
 playwright install chromium
 
-⚙️ Konfigurasi
-1. Mengatur Cookies (fb_cookies.json)
-Agar bot tidak perlu login manual terus-menerus dan menghindari checkpoint:
+## ⚙️ Konfigurasi
 
-Buka Chrome dan install ekstensi Cookie-Editor.
+### 1. Setup Sesi Login (`fb_cookies.json`)
 
-Login ke akun Facebook Anda.
+Bot ini menggunakan cookies agar tidak perlu login berulang dan mengurangi risiko checkpoint.
 
-Klik ikon Cookie-Editor > Klik Export > Pilih JSON.
+**Langkah-langkah:**
 
-Buat file bernama fb_cookies.json di folder bot ini, lalu paste isinya ke sana.
+1. Install ekstensi **Cookie-Editor** di Chrome  
+2. Login ke akun Facebook Anda  
+3. Klik ikon Cookie-Editor → **Export** → pilih **JSON**  
+4. Buat file `fb_cookies.json` di folder project  
+5. Paste hasil export ke dalam file tersebut  
 
-2. Mengatur Daftar Grup (groups.json)
-Buat file groups.json untuk menampung link grup tujuan:
+---
 
-JSON
+### 2. Daftar Grup (`groups.json`)
+
+Buat file `groups.json` dan isi dengan format berikut:
+
+```json
 [
-  { "url": "[https://web.facebook.com/groups/link_grup_1](https://web.facebook.com/groups/link_grup_1)" },
-  { "url": "[https://web.facebook.com/groups/link_grup_2](https://web.facebook.com/groups/link_grup_2)" }
+  { "url": "https://web.facebook.com/groups/link_grup_1" },
+  { "url": "https://web.facebook.com/groups/link_grup_2" }
 ]
-3. Penyesuaian Path Chrome
-Buka file script Python Anda, cari bagian executable_path dan pastikan lokasinya sudah benar sesuai PC Anda:
 
-Default: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
-
-🚀 Cara Menjalankan
-Pastikan semua file (script.py, fb_cookies.json, dan groups.json) berada dalam satu folder. Jalankan dengan:
-
-Bash
-python nama_file_anda.py
