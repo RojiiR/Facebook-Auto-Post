@@ -53,3 +53,19 @@ Buat file `groups.json` dan isi dengan format berikut:
   { "url": "https://web.facebook.com/groups/link_grup_2" }
 ]
 
+
+### 3. Konfigurasi Path Chrome
+
+Buka file `.py` dan sesuaikan `executable_path` dengan lokasi Chrome di perangkat Anda.
+
+Contoh default di Windows:
+
+```bash
+C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+## 🚀 Cara Menjalankan
+
+Jalankan bot dengan perintah berikut:
+
+```bash
+python bot_fb.py
