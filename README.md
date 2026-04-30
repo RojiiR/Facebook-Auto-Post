@@ -27,7 +27,8 @@ pip install playwright
 # Install browser driver khusus Chromium
 playwright install chromium
 
-## ⚙️ Konfigurasi
+```
+##⚙️ Konfigurasi
 
 ### 1. Setup Sesi Login (`fb_cookies.json`)
 
