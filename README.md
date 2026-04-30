@@ -29,7 +29,7 @@ playwright install chromium
 
 ```
 ---
-###⚙️ Konfigurasi
+## ⚙️ Konfigurasi
 
 ### 1. Setup Sesi Login (`fb_cookies.json`)
 
